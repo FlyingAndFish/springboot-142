@@ -1,0 +1,24 @@
+server:
+  port: 8989
+  context-path: /ems
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  datasource:
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/mytest
+    username: root
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  jackson:
+    date-format: MM/dd/yyyy
+    time-zone: GMT+8
+mybatis:
+  mapper-locations: classpath:/com/wz/mapper/*Mapper.xml
+  type-aliases-package: com.wz.entity
